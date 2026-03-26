@@ -1,5 +1,6 @@
 package com.example.FootyFocus2.service;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -17,8 +18,11 @@ import com.example.FootyFocus2.entity.LeagueStandings;
 @Service
 public class LeagueStandingsService {
 
-    private static String  API_URL = "http://api.football-data.org/v4/competitions/{leagueCode}/standings?season={season}";
-    private static String API_KEY = "e277c182b1374e1e96a27d065fab02a5";
+    @Value("${leagueStandings.api.url}")
+    private String API_URL;
+
+    @Value("${football.api.key}")
+    private String API_KEY;
 
     public List<LeagueStandings> fetchStandings(String leagueCode, String season){
         RestTemplate restTemplate = new RestTemplate();
