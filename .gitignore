@@ -1,0 +1,39 @@
+# Node/Angular (Frontend)
+node_modules/
+dist/
+tmp/
+out-tsc/
+bazel-out/
+npm-debug.log
+yarn-error.log
+.angular/cache
+.sass-cache/
+coverage
+libpeerconnection.log
+testem.log
+typings
+
+# Java/Spring Boot (Backend)
+target/
+*.class
+*.jar
+*.war
+*.ear
+
+# IDEs and editors
+.idea/
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+.vscode/
+.history/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Environment files
+.env
